@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "210185854482",
+    "project_id": "quickseatgcuf",
+    "storage_bucket": "quickseatgcuf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210185854482:android:faafa09fbef97585a8c2cb",
+        "android_client_info": {
+          "package_name": "com.example.quickseat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7gC3FfuA5-q5UsIHBn7uZn9CRSEsVx5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

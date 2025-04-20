@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.QuickSeat" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+
+
+    </style>
+
+    <style name="Theme.QuickSeat" parent="Base.Theme.QuickSeat">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+    </style>
+    <color name="button_background">#1976D2</color>
+
+    <style name="Screen">
+        <item name="android:background" >#FFFFFF</item>
+    </style>
+    <style name="Text_splash">
+        <item name="android:textColor" >#055FA6</item>
+    </style>
+    <style name="Text_color">
+        <item name="android:textColor" >#000000</item>
+    </style>
+    <style name="drawer_bg_clr">
+        <item name="android:background" >#FBFEFF</item>
+    </style>
+    <style name="header_bg_clr">
+        <item name="android:background" >#DBEBF3</item>
+    </style>
+
+
+    <style name="CustomCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+<!--        <item name="colorAccent">@color/purple_500</item>-->
+<!--        <item name="android:textColorSecondary">@color/purple_700</item>-->
+        <item name="android:background">@color/white</item>
+
+<!--         <item name="android:buttonTint">#BABADC</item>-->
+      </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Customize the splash screen -->
+        <item name="windowSplashScreenBackground">@color/splash</item> <!-- Background color -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo11</item> <!-- Icon -->
+<!--        <item name="windowSplashScreenIconSize">120dp</item>-->
+        <item name="postSplashScreenTheme">@style/Theme.QuickSeat</item> <!-- Theme after splash -->
+    </style>
+</resources>

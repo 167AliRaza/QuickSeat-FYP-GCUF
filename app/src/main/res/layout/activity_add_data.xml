@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Screen"
+    android:padding="16dp"
+    tools:context=".add_data">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add New Bus"
+                android:textAlignment="center"
+                style="@style/Text_color"
+                android:fontFamily="serif"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/bus_no_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawablePadding="12dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:hint="Bus No"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textAlignment="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="40dp"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+            <EditText
+                android:id="@+id/bus_route_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawablePadding="12dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:hint="Bus Route"
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="35"
+                android:textAlignment="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="40dp"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bus_no_et" />
+
+            <EditText
+                android:id="@+id/bus_seats_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawablePadding="12dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:hint="Bus Seats"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="40dp"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bus_route_et" />
+            <EditText
+                android:id="@+id/bus_date_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawablePadding="12dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:hint="Bus Date"
+                android:inputType="date"
+                android:clickable="true"
+                android:focusable="false"
+                android:textAlignment="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="40dp"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bus_seats_et" />
+
+            <EditText
+                android:id="@+id/bus_time_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawablePadding="12dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:hint="Bus Time"
+                android:inputType="time"
+                android:clickable="true"
+                android:focusable="false"
+                android:textAlignment="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="40dp"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bus_date_et" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/data_insert_btn"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button_bg"
+                android:text="Add"
+                android:textSize="18sp"
+                android:fontFamily="serif"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/bus_time_et"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAllCaps="false" />
+
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/progressbr"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/data_insert_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

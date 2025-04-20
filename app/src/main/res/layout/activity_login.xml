@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Screen"
+    android:padding="32dp"
+    tools:context=".login">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@style/Screen">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="DeepSeek Logo"
+            android:src="@drawable/quikseet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/registration_info_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:text="Only Vaild GCUF Student Can Sign In."
+            style="@style/Text_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:fontFamily="serif"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/mail_icon"
+            android:drawablePadding="12dp"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#000000"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registration_info_text" />
+
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/password_icon"
+            android:drawablePadding="12dp"
+            android:fontFamily="serif"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="40dp"
+            android:textColor="#000000"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_edit_text" />
+
+        <CheckBox
+            android:id="@+id/terms_checkbox"
+            android:buttonTint="@color/purple_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
+
+        <TextView
+            android:id="@+id/terms_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="I agree to QuickSeat's Terms of Use and Privacy Policy."
+            style="@style/Text_color"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/terms_checkbox"
+            app:layout_constraintTop_toTopOf="@+id/terms_checkbox"
+            app:layout_constraintBottom_toBottomOf="@+id/terms_checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_bg"
+            android:text="Sign in"
+            android:textSize="18sp"
+            android:fontFamily="serif"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/terms_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/forget_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Forget Password?"
+            android:clickable="true"
+            android:textColor="#007BFF"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/sign_in_button"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />
+
+        <TextView
+            android:id="@+id/sign_up_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:fontFamily="serif"
+            android:text="Sign up"
+            android:layout_marginTop="10dp"
+            android:textColor="#007BFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/sign_in_button"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forget_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</android.widget.ScrollView>
+
+
+

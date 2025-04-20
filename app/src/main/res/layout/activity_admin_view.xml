@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin_view">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="4dp"
+        android:visibility="gone"
+        android:id="@+id/cardView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/crossbtn"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:text="X"
+            android:textColor="#EC0101"
+
+            android:textSize="30dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete Bus"
+                android:fontFamily="serif"
+                android:layout_marginBottom="30dp"
+                android:textAlignment="center"
+                style="@style/Text_color"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+
+            <EditText
+                android:id="@+id/busNoeditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter Bus No"
+                android:maxLength="6"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_edittext"
+                android:drawablePadding="12dp"
+                android:focusable="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:paddingStart="16dp"
+                android:paddingEnd="40dp"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:textSize="16sp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/delbutton"
+                android:background="@drawable/button_bg"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:fontFamily="serif"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40sp"
+                android:text="Delete" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_bg"
+        android:src="@drawable/baseline_delete_24"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_bg"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delete_button"
+        app:layout_constraintVertical_bias="0.49" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

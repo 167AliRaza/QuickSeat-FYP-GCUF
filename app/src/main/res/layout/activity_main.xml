@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    style="@style/Screen"
+    android:padding="35dp"
+
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+
+
+
+        style="@style/Screen">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="DeepSeek Logo"
+            android:src="@drawable/quikseet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/registration_info_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:text="Only Vaild GCUF Student Can Register."
+            style="@style/Text_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/mail_icon"
+            android:drawablePadding="12dp"
+            android:fontFamily="serif"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registration_info_text" />
+
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="40dp"
+            android:fontFamily="serif"
+            android:textColor="@color/black"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_edit_text"
+            android:drawableStart="@drawable/password_icon"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/confirm_password_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:fontFamily="serif"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/password_icon"
+            android:drawablePadding="12dp"
+            android:hint="Confirm password"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="40dp"
+            android:textColor="@color/black"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
+
+        <EditText
+            android:id="@+id/rollNo_edit_text"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/school_24"
+            android:drawablePadding="12dp"
+            android:fontFamily="serif"
+            android:hint="University Roll No"
+            android:inputType="number"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirm_password_edit_text" />
+
+        <CheckBox
+            android:id="@+id/terms_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/purple_500"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rollNo_edit_text" />
+
+        <TextView
+            android:id="@+id/terms_text"
+            style="@style/Text_color"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="serif"
+            android:text="I agree to QuickSeat's Terms of Use and Privacy Policy."
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/terms_checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/terms_checkbox"
+            app:layout_constraintTop_toTopOf="@+id/terms_checkbox" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sign_up_button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_bg"
+            android:textColor="@color/white"
+            android:fontFamily="serif"
+            android:text="Sign up"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terms_text" />
+
+        <TextView
+            android:id="@+id/contact_us_text"
+            style="@style/Text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="27dp"
+            android:fontFamily="serif"
+            android:text="Already have an account?"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/sign_in_btn"
+            app:layout_constraintStart_toStartOf="@+id/sign_up_button"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_button"
+             />
+
+        <TextView
+            android:id="@+id/sign_in_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            android:clickable="true"
+            android:fontFamily="serif"
+            android:text="Sign in"
+            android:textColor="#007BFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/contact_us_text"
+         app:layout_constraintTop_toBottomOf="@+id/sign_up_button" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_us_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

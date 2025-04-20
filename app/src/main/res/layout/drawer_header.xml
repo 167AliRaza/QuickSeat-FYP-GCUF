@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/header_bg_clr"
+    android:padding="24dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="40dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/nav_header_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/quikseet"
+            tools:src="@drawable/quikseet"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/nav_header_name"
+        style="@style/Text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:text="John Doe"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="John Doe"/>
+
+    <TextView
+        android:id="@+id/nav_header_rollno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9876543"
+        android:fontFamily="serif"
+        android:layout_gravity="center"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        tools:text="9876543"/>
+
+    <TextView
+        android:id="@+id/nav_header_email"
+        style="@style/Text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:text="john.doe@example.com"
+        android:textSize="14sp"
+        tools:text="john.doe@example.com"/>
+
+</LinearLayout>
+
+
+
+
