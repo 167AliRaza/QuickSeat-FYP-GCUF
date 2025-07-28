@@ -45,13 +45,48 @@ To set up the QuickSeat project locally, follow these steps:
 
 
 ## Usage
+QuickSeat provides a streamlined interface for managing bus seating. Below are detailed usage scenarios for different user types:
 
-1. **Sign Up**: Navigate to the sign-up page, enter your email, password, confirm password, and university roll number. Agree to the Terms of Use and Privacy Policy to create an account.
-2. **Sign In**: Use your credentials to log in if you already have an account.
-3. **View Bus Schedule**: Check the bus schedule table to see available and booked buses.
-4. **Admin Actions**:
-   - **Add Bus**: Use the "Add New Bus" feature to include a new bus in the system.
-   - **Delete Bus**: Enter the bus number in the "Delete Bus" section to remove a bus.
+1. **User Registration**:
+   - Navigate to the sign-up page.
+   - Enter your email, password, confirm password, and university roll number.
+   - Check the box to agree to QuickSeat's Terms of Use and Privacy Policy.
+   - Click "Sign up" to create your account.
+   - Upon successful registration, you’ll be redirected to the login page.
+
+2. **User Login**:
+   - Go to the login page.
+   - Enter your registered email and password.
+   - Click "Sign in" to access your account.
+   - If you’ve forgotten your password, click "Forgot Password?" to initiate the password reset process.
+
+3. **Viewing Bus Schedules**:
+   - After logging in, navigate to the bus schedule section.
+   - View a table displaying available buses, including details like timing (e.g., 15:30), date (e.g., 20/5/2025), and available seats (e.g., 70 or 40 seats).
+   - Seats are color-coded: green for available and red for booked.
+   - Select a bus to view detailed seating arrangements or to book a seat.
+
+4. **Booking a Seat**:
+   - From the bus schedule, click on a bus to see its seat layout.
+   - Choose an available seat (marked green) and confirm your booking.
+   - After booking, the seat will turn red, indicating it’s reserved.
+   - Receive a confirmation email with your booking details (if configured).
+
+5. **Admin: Adding a New Bus**:
+   - Log in with an admin account.
+   - Navigate to the admin panel and select "Add New Bus."
+   - Enter bus details such as bus number, schedule (e.g., timing: 15:15, date: 20/5/2025), and total seats (e.g., 70).
+   - Submit to add the bus to the schedule.
+
+6. **Admin: Deleting a Bus**:
+   - In the admin panel, go to the "Delete Bus" section.
+   - Enter the bus number you wish to remove (e.g., Bus #45).
+   - Confirm deletion to remove the bus from the system.
+
+7. **Admin: Resetting Ratings**:
+   - Access the "Reset Ratings" feature in the admin panel.
+   - Use this to clear user ratings or feedback for buses, if applicable (e.g., for a rating system tied to bus services).
+   - Confirm the reset action to update the database.
 
 
 ## Contributing
